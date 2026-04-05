@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: mohamedfawzi/argocd-demo
-  tag: "c132cd894d7b8f58274cff5502c1bc9b694add6b"
+  tag: "5a590a2ac5f70ec7b7f15e68ba738e7060daa6af"
 
 service:
   port: 80
