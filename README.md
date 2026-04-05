@@ -31,3 +31,79 @@ mo@centOs-server:~/My-Folders/SlashTec/Templates/production-ready-eks-app/slasht
 
 
 kubectl get svc mo-app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mo@centOs-server:~/My-Folders/SlashTec/Templates/production-ready-eks-app/slashtec-k8s-hem$ helm install monitoring prometheus-community/kube-prometheus-stack \
+  --namespace monitoring \
+  --create-namespace
+NAME: monitoring
+LAST DEPLOYED: Sun Apr  5 16:36:55 2026
+NAMESPACE: monitoring
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+NOTES:
+kube-prometheus-stack has been installed. Check its status by running:
+  kubectl --namespace monitoring get pods -l "release=monitoring"
+
+Get Grafana 'admin' user password by running:
+
+  kubectl --namespace monitoring get secrets monitoring-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+
+Access Grafana local instance:
+
+  export POD_NAME=$(kubectl --namespace monitoring get pod -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=monitoring" -oname)
+  kubectl --namespace monitoring port-forward $POD_NAME 3000
+
+Get your grafana admin user password by running:
+
+  kubectl get secret --namespace monitoring -l app.kubernetes.io/component=admin-secret -o jsonpath="{.items[0].data.admin-password}" | base64 --decode ; echo
+
+
+Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+
+
+
+
+
+grafana password : 3luaD9LFH3ud5PKch4XazJUarNLBXMZf9mzcRZZW
+
+
+
+
+kubectl get secret quickstart-es-elastic-user -n logging -o jsonpath="{.data.elastic}" | base64 -d ; echo
+
+
+elasticsearch password : lBS2ypB81UmjE91ugJopYMVX
+
