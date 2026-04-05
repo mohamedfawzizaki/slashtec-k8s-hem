@@ -28,3 +28,6 @@ mo@centOs-server:~/My-Folders/SlashTec/Templates/production-ready-eks-app/slasht
 
 
 9QJcWwpL3rzhnEIm
+
+
+kubectl get svc mo-app
