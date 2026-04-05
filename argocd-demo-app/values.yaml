@@ -1,0 +1,8 @@
+replicaCount: 1
+
+image:
+  repository: mohamedfawzizaki/argocd-demo
+  tag: latest
+
+service:
+  port: 80
