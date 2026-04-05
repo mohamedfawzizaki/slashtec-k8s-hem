@@ -30,7 +30,7 @@ jobs:
       with:
         context: ./app
         push: true
-        tags: \${{ secrets.DOCKER_USERNAME }}/argocd-demo:\${{ steps.vars.outputs.TAG }}
+        tags: ${{ secrets.DOCKER_USERNAME }}/argocd-demo:${{ steps.vars.outputs.TAG }}
 
     - name: Update Helm values.yaml
       run: |
