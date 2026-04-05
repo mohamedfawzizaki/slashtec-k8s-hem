@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}
   namespace: default
 spec:
-  type: ClusterIP
+  type: {{ .Values.service.type }}
   selector:
     app: {{ .Release.Name }}
   ports:
