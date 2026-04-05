@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello from ArgoCD App 6');
+  res.send('Hello from ArgoCD App 7');
 });
 
 app.listen(3000, () => {
